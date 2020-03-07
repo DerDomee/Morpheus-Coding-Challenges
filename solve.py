@@ -11,7 +11,7 @@ import _thread
 import importlib
 import requests
 
-SCRIPT_VERSION = "0.9.1-RC1"
+SCRIPT_VERSION = "0.9.0-RC1"
 
 TIMING = {}
 METADATA = {'wrong_solution_count': 0,
