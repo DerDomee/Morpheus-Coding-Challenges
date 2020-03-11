@@ -1,3 +1,4 @@
+#!/bin/python
 """
 This is the main function of the challengesolve python interface.
 It is called with 'solve.py <challengenumber> [number-of-runs]'.
