@@ -42,7 +42,7 @@ def print_help():
 
 def print_version():
     """Print version information about this script"""
-    sys.stdout.write(SCRIPT_VERSION)
+    sys.stdout.write(SCRIPT_VERSION + "\n")
     return 0
 
 
