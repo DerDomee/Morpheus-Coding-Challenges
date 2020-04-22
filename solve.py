@@ -24,18 +24,23 @@ METADATA = {'wrong_solution_count': 0,
 
 def print_help():
     """Print the help"""
+
+    # This String looks very proprietary. It is just formatted in a way that
+    # It doesnt exceed the 80 char limit in terminal output as well as in code.
+    # Sorry for this mess, but it is very clean in terminal output.
     helpstr = "solve.py - Python interface for the " \
               "Morpheus Coding Challenges\n\n" \
-              "Usage: solve.py <challenge> [runs] [flags...]\t\t" \
-              "Runs the solvescript\n       solve.py --help\t\t\t\t\tPrint " \
-              "this help\n       solve.py --version\t\t\t\tPrint version " \
-              "information\n\n" \
+              "Usage: solve.py <challenge> [runs] [flags...]\t" \
+              "Runs the solvescript\n       solve.py --help\t\t\t\tPrint " \
+              "this help and exit\n       solve.py --version\t\t\tPrint " \
+              "version information and\n\t\t\t\t\t\texit\n\n" \
               "Possible flags:\n\t--bench\t\tPrint benchmark information\n" \
-              "\t--parallel\tUse multithreading to solve every run in " \
-              "parallel.\n\t\t\tThis limits the maximum number of runs to " \
-              "100 to \n\t\t\tprevent rate limit crashing.\n" \
-              "\t--interactive\tPrint runtime settings before solving " \
-              "the challenges\n\t\t\tand ask if user wants to proceed\n"
+              "\t--interactive\tBefore solving the challenges, print the " \
+              "parsed\n\t\t\truntime-settings and ask if user wants to " \
+              "proceed\n\t--parallel\tUse multithreading to solve every run " \
+              "in parallel.\n\t\t\tThis limits the maximum number of runs " \
+              "to 100 to \n\t\t\tprevent rate limit crashing.\n"
+
     sys.stdout.write(helpstr)
     return 0
 
