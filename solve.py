@@ -73,7 +73,7 @@ def setup_solving(challenge_number, challenge_tries, use_multithreading):
     METADATA['runs_awaiting'] = challenge_tries
     solvefile = None
     try:
-        solvefile = importlib.import_module('chall' + str(challenge_number))
+        solvefile = importlib.import_module('challenges.chall' + str(challenge_number))
     except ModuleNotFoundError:
         sys.stderr.write("Solution-File not found.\n")
         return 1
