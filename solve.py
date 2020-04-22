@@ -24,15 +24,19 @@ METADATA = {'wrong_solution_count': 0,
 
 def print_help():
     """Print the help"""
-    sys.stdout.write("solve.py - Python interface for the Morpheus Challenges.\n\n")
-    sys.stdout.write("Usage: solve.py <challenge> [runs] [flags...]\t\tRun the solvescript\n")
-    sys.stdout.write("       solve.py --help\t\t\t\t\tPrint this help\n")
-    sys.stdout.write("       solve.py --version\t\t\t\tPrint version information\n\n")
-    sys.stdout.write("Possible flags:\n")
-    sys.stdout.write("\t--bench\t\tPrint benchmark information (Set by default with [runs >= 10] )\n")
-    sys.stdout.write("\t--nobench\tSuppress benchmark information\n")
-    sys.stdout.write("\t--parallel\tUse multithreading to solve every run in parallel.\n"
-                     + "\t\t\tThis limits the maximum number of runs to 100 to prevent unwanted ddos.\n")
+    helpstr = "solve.py - Python interface for the " \
+              "Morpheus Coding Challenges\n\n" \
+              "Usage: solve.py <challenge> [runs] [flags...]\t\t" \
+              "Runs the solvescript\n       solve.py --help\t\t\t\t\tPrint " \
+              "this help\n       solve.py --version\t\t\t\tPrint version " \
+              "information\n\n" \
+              "Possible flags:\n\t--bench\t\tPrint benchmark information\n" \
+              "\t--parallel\tUse multithreading to solve every run in " \
+              "parallel.\n\t\t\tThis limits the maximum number of runs to " \
+              "100 to \n\t\t\tprevent rate limit crashing.\n" \
+              "\t--interactive\tPrint runtime settings before solving " \
+              "the challenges\n\t\t\tand ask if user wants to proceed\n"
+    sys.stdout.write(helpstr)
     return 0
 
 
