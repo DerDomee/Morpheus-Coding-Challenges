@@ -24,7 +24,7 @@ import _thread
 import importlib
 import requests
 
-SCRIPT_VERSION = "0.10.0-RC1"
+SCRIPT_VERSION = "1.0.0"
 
 
 def print_help():
