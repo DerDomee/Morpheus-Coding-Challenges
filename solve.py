@@ -424,7 +424,7 @@ def print_result(run_args, run_result, statistics):
     )
     print(
         "CTF-Token: " +
-        run_result['run_data']['ctf_token']
+        str(run_result['run_data']['ctf_token'])
     )
     if(run_args['benchmark_mode']):
         print()
