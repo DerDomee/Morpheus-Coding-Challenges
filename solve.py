@@ -107,7 +107,7 @@ def parse_arguments():
     """
     run_args= {
         'raw_arguments': sys.argv[1:],
-        'run_parallel': False,
+        'parallel_mode': False,
         'run_interactive': False,
         'interactive_mode': False,
         'benchmark_mode': False,
@@ -169,9 +169,9 @@ def parse_arguments():
                 print_version()
                 sys.exit(0)
         elif argument_instance == "--parallel":
-            if run_args['run_parallel']:
+            if run_args['parallel_mode']:
                 print_double_argument()
-            run_args['run_parallel'] = True
+            run_args['parallel_mode'] = True
             continue
         elif argument_instance == "--interactive":
             if run_args['interactive_mode']:
@@ -233,8 +233,8 @@ def check_arguments(run_args):
         run_args['benchmark_mode'] = False
 
     if "runs_number" in run_args and run_args['runs_number'] > 100 and \
-      run_args['benchmark_mode']:
-        print_warning_state("Benchmark mode limits the maximum amount " +
+      run_args['parallel_mode']:
+        print_warning_state("Parallel mode limits the maximum amount " +
                             "of runs to 100 to prevent rate limit crashing. " +
                             "Applying limit.")
         run_args['runs_number'] = 100
@@ -255,7 +255,7 @@ def interactive_pass(run_args):
     setstr =  "--------------------"
     setstr += "\nChallenge to run: {}".format(run_args['challenge_number'])
     setstr += "\nNumber of runs: {}".format(run_args['runs_number'])
-    setstr += "\nParallel Mode: {}".format(run_args['run_parallel'])
+    setstr += "\nParallel Mode: {}".format(run_args['parallel_mode'])
     setstr += "\nBenchmark Mode: {}".format(run_args['benchmark_mode'])
     setstr += "\nSave results in file: {}".format(run_args['save_raw_results'])
     setstr += "\n--------------------"
@@ -331,7 +331,7 @@ def solve_challenges(run_args):
         sys.exit(105)
 
     for i in range(run_args['runs_number']):
-        if(run_args['run_parallel']):
+        if(run_args['parallel_mode']):
             _thread.start_new_thread(
                 solve_instance,
                 (run_args, run_data, timing_data, i, solvefile)
