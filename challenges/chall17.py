@@ -1,6 +1,6 @@
 """
-This solves Coding Challenge 16:
-Calculate the longest consecutive subsequence of numbers in an array.
+This solves Coding Challenge 17:
+Check if a list contains duplicates.
 """
 
 import json
