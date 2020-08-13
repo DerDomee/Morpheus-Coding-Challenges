@@ -12,8 +12,8 @@ def solve(data):
         "+": (lambda a, b: a + b),
         "-": (lambda a, b: a - b),
         "*": (lambda a, b: a * b),
-        "/": (lambda a, b: a / b),
-    }
+        "/": (lambda a, b: a / b)}
+
     tokens = data.split(" ")
     stack = []
     for token in tokens:

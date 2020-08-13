@@ -24,7 +24,11 @@ def solve(data):
                     elif slist[i] + slist[j] + slist[n] + slist[m] > k:
                         m -= 1
                     else:
-                        solution = [nlist.index(slist[i]), nlist.index(slist[j]), nlist.index(slist[n]), nlist.index(slist[m])]
+                        solution = [nlist.index(
+                            slist[i]),
+                            nlist.index(slist[j]),
+                            nlist.index(slist[n]),
+                            nlist.index(slist[m])]
                         return solution
     # enddef evalsum
 
