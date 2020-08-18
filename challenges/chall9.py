@@ -1,6 +1,7 @@
 """
-This solves Coding Challenge 07:
-Given a number k, find two numbers in a list that add to k.
+This solves Coding Challenge 09:
+Given a number k, find two numbers in a list that add to k and return the two
+indices that match this requirement AND are the closest together in the list.
 """
 
 import json
